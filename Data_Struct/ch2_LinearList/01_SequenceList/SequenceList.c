@@ -177,4 +177,15 @@ Status ListTraverse_Sq(SqList L, void(Visit)(LElemType_Sq))
 	return OK;
 }
 
+Status Compare(LElemType_Sq a,LElemType_Sq b)
+{
+	if (a != b)
+	{
+		return 0;
+	}
+	return 1;
+    
+}
+
+
 #endif
