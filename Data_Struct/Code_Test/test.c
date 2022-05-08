@@ -1,6 +1,27 @@
 #include<stdio.h>
 #include<stdbool.h>
+#include<unistd.h>
 
+int foo();
+int main()
+{
+    int a = foo(3);
+    printf("a=%d",a);
+
+    
+// printf("%d %d", *(int*)(a + 1), *(ptr - 1));
+getchar();
+}
+int foo(int n){
+    if(n < 2){
+        return n;
+    }
+    else
+        return 2*foo(n-1)+foo(n-2);
+}
+
+
+/* 
 void bubble_sort();
 void swap_num();
 int main(){
@@ -43,3 +64,4 @@ void swap_num(int *a ,int *b){
     *a = *b;
     *b = temp;
 }
+*/
